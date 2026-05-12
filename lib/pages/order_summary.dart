@@ -1,5 +1,6 @@
 import 'package:court_booking/pages/payment_method.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class OrderSummary extends StatelessWidget {
   const OrderSummary({super.key});
@@ -7,12 +8,16 @@ class OrderSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           "Order Summary",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
+        backgroundColor: Colors.white,
+        elevation: 1,
+        surfaceTintColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -30,14 +35,14 @@ class OrderSummary extends StatelessWidget {
                   children: [
                     Text(
                       "Basketball Court A",
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       "Indoor || Air Conditioned",
-                      style: TextStyle(fontSize: 16, color: Colors.grey[200]),
+                      style: GoogleFonts.poppins(fontSize: 16, color: Colors.grey),
                     ),
                     SizedBox(height: 50),
                     Row(
@@ -46,7 +51,7 @@ class OrderSummary extends StatelessWidget {
                         SizedBox(width: 10),
                         Text(
                           "Date",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -54,7 +59,7 @@ class OrderSummary extends StatelessWidget {
                         Spacer(),
                         Text(
                           "Today, Dec 15",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                           ),
@@ -69,7 +74,7 @@ class OrderSummary extends StatelessWidget {
                         SizedBox(width: 10),
                         Text(
                           "Duration",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -77,7 +82,7 @@ class OrderSummary extends StatelessWidget {
                         Spacer(),
                         Text(
                           "2 Hours",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                           ),
@@ -92,7 +97,7 @@ class OrderSummary extends StatelessWidget {
                         SizedBox(width: 10),
                         Text(
                           "Price per Hour",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
                           ),
@@ -100,7 +105,7 @@ class OrderSummary extends StatelessWidget {
                         Spacer(),
                         Text(
                           "Rp. 50.000,00",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontWeight: FontWeight.bold,
                             fontSize: 18,
                           ),
@@ -112,10 +117,10 @@ class OrderSummary extends StatelessWidget {
                       children: [
                         Text(
                           "Subtotal (2 Hours)",
-                          style: TextStyle(fontSize: 16),
+                          style: GoogleFonts.poppins(fontSize: 16),
                         ),
                         Spacer(),
-                        Text("Rp. 50.000,00", style: TextStyle(fontSize: 18)),
+                        Text("Rp. 50.000,00", style: GoogleFonts.poppins(fontSize: 18)),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -123,10 +128,10 @@ class OrderSummary extends StatelessWidget {
                       children: [
                         Text(
                           "Subtotal (2 Hours)",
-                          style: TextStyle(fontSize: 16),
+                          style: GoogleFonts.poppins(fontSize: 16),
                         ),
                         Spacer(),
-                        Text("Rp. 50.000,00", style: TextStyle(fontSize: 18)),
+                        Text("Rp. 50.000,00", style: GoogleFonts.poppins(fontSize: 18)),
                       ],
                     ),
                     SizedBox(height: 20),
@@ -134,7 +139,7 @@ class OrderSummary extends StatelessWidget {
                       children: [
                         Text(
                           "Total",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
@@ -142,7 +147,7 @@ class OrderSummary extends StatelessWidget {
                         Spacer(),
                         Text(
                           "Rp. 100.000,00",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                           ),
@@ -174,7 +179,7 @@ class OrderSummary extends StatelessWidget {
                           children: [
                             Text(
                               "Booking Policy",
-                              style: TextStyle(
+                              style: GoogleFonts.poppins(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14,
                               ),
@@ -211,8 +216,7 @@ class OrderSummary extends StatelessWidget {
                 child: Text(
                   "Choose Payment Method",
                   style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
                     color: Colors.white,
                   ),
                 ),

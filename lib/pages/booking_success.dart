@@ -1,3 +1,4 @@
+import 'package:court_booking/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -7,6 +8,7 @@ class BookingSuccess extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50),
         child: Center(
@@ -54,66 +56,79 @@ class BookingSuccess extends StatelessWidget {
                           color: Colors.black,
                         ),
                       ),
-                      Text(
-                        "View Booking Details",
-                        style: GoogleFonts.poppins(color: Colors.grey),
+                      SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Text(
+                            "Court Name",
+                            style: GoogleFonts.poppins(color: Colors.grey),
+                          ),
+                          Spacer(),
+                          Text(
+                            "Futsal Court A",
+                            style: GoogleFonts.poppins(color: Colors.grey),
+                          ),
+                        ],
                       ),
+                      SizedBox(height: 5),
 
                       Row(
                         children: [
                           Text(
-                            "View Booking Details",
+                            "Date",
                             style: GoogleFonts.poppins(
                               fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                              color: Colors.grey,
                             ),
                           ),
                           Spacer(),
                           Text(
-                            "View Booking Details",
+                            "Dec 15",
                             style: GoogleFonts.poppins(color: Colors.grey),
                           ),
                         ],
                       ),
+                      SizedBox(height: 5),
                       Row(
                         children: [
                           Text(
-                            "View Booking Details",
+                            "Duration",
                             style: GoogleFonts.poppins(
                               fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                              color: Colors.grey,
                             ),
                           ),
                           Spacer(),
                           Text(
-                            "View Booking Details",
+                            "1 Hours",
                             style: GoogleFonts.poppins(color: Colors.grey),
                           ),
                         ],
                       ),
+                      SizedBox(height: 5),
                       Row(
                         children: [
                           Text(
-                            "View Booking Details",
+                            "Payment Method",
                             style: GoogleFonts.poppins(
                               fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black,
+                              color: Colors.grey,
                             ),
                           ),
                           Spacer(),
                           Text(
-                            "View Booking Details",
+                            "Cash Payment",
                             style: GoogleFonts.poppins(color: Colors.grey),
                           ),
                         ],
                       ),
+                      SizedBox(height: 8),
+                      Divider(height: 2, color: Colors.black),
+                      SizedBox(height: 8),
                       Row(
                         children: [
                           Text(
-                            "View Booking Details",
+                            "Total Price",
                             style: GoogleFonts.poppins(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -122,14 +137,48 @@ class BookingSuccess extends StatelessWidget {
                           ),
                           Spacer(),
                           Text(
-                            "View Booking Details",
-                            style: GoogleFonts.poppins(color: Colors.grey),
+                            "Rp. 55.000",
+                            style: GoogleFonts.poppins(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
                           ),
                         ],
                       ),
                     ],
                   ),
                 ),
+              ),
+              Spacer(),
+              Column(
+                children: [
+                  CustomButton(
+                    textButton: "Download Receipt",
+                    onPressed: () {},
+                  ),
+                  SizedBox(height: 15,),
+                  SizedBox(
+                    height: 50,
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.grey[100],
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                      child: Text(
+                        "Back to Home",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
